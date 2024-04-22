@@ -7239,6 +7239,16 @@ msp432 bsl lock
 @end deffn
 @end deffn
 
+@deffn {Flash Driver} {mspm0}
+All members of the MSPM0G/L/C microcontroller family from Texas Instruments
+include internal flash and use ARM Cortex-M0+ cores. The @var{mspm0} flash
+driver automatically recognizes the MAIN flash size and configures itself.
+
+@example
+flash bank $_FLASHNAME mspm0 0 0 0 0 $_TARGETNAME
+@end example
+@end deffn
+
 @deffn {Flash Driver} {niietcm4}
 This drivers handles the integrated NOR flash on NIIET Cortex-M4
 based controllers. Flash size and sector layout are auto-configured by the driver.
